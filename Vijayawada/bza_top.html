@@ -91,7 +91,7 @@
 
           <nav>
             <div class="button-container">
-            <a href="/index.html" target="vijayawada.html"><button class="nav-button"><b style="color: black;">Home</b></button></a>
+           <button value="../index.html" id ="Home" class="nav-button"><b style="color: black;">Home</b></button>
             
 
                 
@@ -100,16 +100,10 @@
                 
                 <optgroup label="Default">
                 <option value="">select_any_one_service</option></optgroup> 
-                <!-- select id="MedicalSerives" name="k"> -->
-                <option value="govt.html">Government</option>
-                    <option value="pvt.html">Private</option>
-               
                 <optgroup label="Medical services">
                     <option value="govt.html">Government</option>
                     <option value="pvt.html">Private</option>
-                </optgroup
-                
-                
+                </optgroup>
                 <optgroup label="Family Restaurants">
                     <option value="fam1.html">THE GATEWAY HOTEL</option>
                     <option value="fam2.html">Barbeque Nation</option>
@@ -152,9 +146,14 @@
             <script>
                 // Get the select element
                 const selectElement = document.getElementById('Services');
-            
+                const selectAction=document.getElementById('Home')
+                selectAction.addEventListener('click',()=>{
+                    const selectedValue1=selectAction.value;
+                    window.open(selectedValue1, '_blank');
+                    console.log(selectedValue1)
+                })
                 // Add an event listener to handle option selection
-                selectElement.addEventListener('change', function () {
+                selectElement.addEventListener('change',  ()=> {
                   const selectedValue = selectElement.value;
                     console.log(selectedValue)
                   // Check if a valid option (not the default) is selected
