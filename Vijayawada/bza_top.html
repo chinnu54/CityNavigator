@@ -93,15 +93,8 @@
             <div class="button-container">
             <a href="/index.html" target="vijayawada.html"><button class="nav-button"><b style="color: black;">Home</b></button></a>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+                
             <select  id="Services"  name="Services" style="height:30px;">
                 
                 
@@ -163,7 +156,7 @@
                 // Add an event listener to handle option selection
                 selectElement.addEventListener('change', function () {
                   const selectedValue = selectElement.value;
-            
+                    console.log(selectedValue)
                   // Check if a valid option (not the default) is selected
                   if (selectedValue !== '') {
                     // Open the selected HTML file in a new tab/window
